@@ -26,7 +26,7 @@ io.on('connection',socket =>{
     socket.join(user.room);
 
     //Welome current user
-    socket.emit('message',formatMessage(botName,'Welcome to LetChat app!'));
+    socket.emit('message',formatMessage(botName,'Welcome to LetsChat app!'));
 
     //Broadcast when a user connects
     socket.broadcast.to(user.room).emit('message',formatMessage(botName,`${user.username} has joined the chat`));
